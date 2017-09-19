@@ -1,0 +1,48 @@
+extends ../components/layout.pug
+
+block content
+  // Carousel
+  // ==================================================
+  +carousel("myCarousel",[{image:"http://localhost:5003/thamys-guedes/us-central1/app/assets/img/banner-1.png",h1:"Simple,Fresh & Unique Design",p:"Donec posuere augue venenatis",button:{caption:"Show More",url:"#"}},{image:"/assets/img/banner-2.png",h1:"Another example headline",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Learn more",url:"#"}},	{image:"/assets/img/banner-1.png",h1:"One more for good measure.",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Browse gallery",url:"#"}}])
+
+  section#whatWeOffer
+    .container
+      +section-title("What we offer", "Vestibulum elementum ex ullamcorper ligula vulputate", "code")
+      #services
+        - var icons = ['wrench', 'film','life-buoy', 'paper-plane-o', 'bicycle', 'heart-o']
+        each icon in icons
+          +highlight(icon, "Vivamus tincidunt", "Fusce velit magna, rutrum id pellentesque in, imperdiet rutrum neque. Vestibulum elementum ex ullamcorper ligula vulputate, non malesuada nisi ullamcorper. Curabitur tellus ligula, laoreet vitae lectus vitae")
+  section#whoWeAre
+    .col-md-6.col-md-offset-6
+      .text
+        h2 Who we are
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dui massa, condimentum a nisl quis, tristique efficitur erat. Aenean ut suscipit urna. Donec efficitur tristique lobortis. Nullam eu efficitur lacus, et blandit tellus. Mauris viverra condimentum tellus vitae sollicitudin. Mauris quis mattis urna. Suspendisse auctor magna quis ipsum ultrices scelerisque. Vestibulum quis hendrerit enim. Aenean viverra aliquam ex, sed ornare risus porta in.
+
+        p Aenean ut suscipit urna. Donec efficitur tristique lobortis. Nullam eu efficitur lacus, et blandit tellus. Mauris viverra condimentum tellus vitae sollicitudin. Mauris quis mattis urna. Suspendisse auctor magna quis ipsum ultrices scelerisque. Vestibulum quis hendrerit enim. Aenean viverra aliquam ex, sed ornare risus porta in.
+
+        +a-btn("#")
+          | Read More
+  section#seeOurWork
+    .container
+      +section-title("See our work", "Mauris euismod ac nulla vitae fermentum. Morbi ut mauris massa. Sed condimentum elit volutpat turpis sagittis, in scelerisque dui luctus. Nulla id suscipit velit, a maximus massa.", "cog")
+
+      +tab-pills-list(["All", "Web", "Logo Design", "Wordpress", "E-commerce"], 0)
+
+    .container-fluid
+      // Imagens aqui
+      ul.list-unstyled.list-images
+        each val in [1,2,3,4,5,6,7,8]
+          li
+            a(href="#")
+              img.img-responsive(src="http://localhost:5003/thamys-guedes/us-central1/app/assets/img/work-" + val + ".png")
+
+
+  
+  section#testimonials
+    .container
+      +section-title("Testimonials", "Mauris euismod ac nulla vitae fermentum. Morbi ut mauris massa. Sed condimentum elit volutpat turpis sagittis, in scelerisque dui luctus. Nulla id suscipit velit, a maximus massa.", "comments-o")
+      .testimonials
+        - var qtdTestimonials = 2
+        while qtdTestimonials > 0
+          +testimonial("Jon Doe", ", Company Inc.", '“Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consec tetur, adipisci velit, sed quia non numquam eius modi tempora incidunt utis labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minimas veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid amet untras vel illum qui.”')
+          - qtdTestimonials --

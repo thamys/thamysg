@@ -1,0 +1,40 @@
+mixin highlight(icon, title, text)
+    .media
+        .media-left
+            a(href='#')
+                i.fa(class="fa-" + icon)
+        .media-body
+            h4.media-heading= title
+            | #{text}
+            
+mixin box-media-icon(icon, title, position, alignment)
+    - var align = alignment || 'middle'
+    - var pos = position || 'left'
+    .media
+        div(class="media-" + pos +" media-" + align)
+            a(href='#')
+                i.fa(class="fa-" + icon)
+        .media-body
+            if(title)
+                h4.media-heading= title
+            block
+
+
+mixin section-title(title, text, icon)
+    .section-title
+        .title
+            h2= title
+            .underlines
+                .line
+                i.fa(class="fa-"+ icon)
+                .line
+        .subtitle
+            p= text
+
+mixin testimonial(name, company, text)
+    blockquote
+        p.text= text
+        .footer
+            i.fa.fa-user
+            cite(title=name)= name
+            | #{company}

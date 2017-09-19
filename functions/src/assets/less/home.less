@@ -1,0 +1,173 @@
+@import "_fonts.less";
+
+@base_color: #709dca;
+@contrast_color: #ffc155;
+@text_color: #062033;
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+	min-height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.navbar-default{
+	.navbar-brand{
+		font-family: 'Pacifico', cursive;
+		color: @contrast_color;
+		font-size: 28px;
+	}
+}
+footer {
+  position: absolute;
+  bottom: 0;
+	width: 100%;
+  /* Set the fixed height of the footer here */
+	height: 0;
+	.footer{
+		background-color: #273a43;
+		color: #c4c4c4;
+		padding: 30px 0 0;
+		.title{
+			color: #fff;
+		}
+		.title.brand{
+			font-family: 'Pacifico', cursive;
+		}
+		.btn-primary{
+			background-color: @base_color;
+		}
+		.foot{
+			background-color: #172227;
+			padding: 15px 0;
+			margin-top: 20px;
+			.container{
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: row;
+				-ms-flex-direction: row;
+				flex-direction: row;
+				-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				-webkit-justify-content: space-between;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				-webkit-align-content: center;
+				-ms-flex-line-pack: center;
+				align-content: center;
+				-webkit-align-items: center;
+				-ms-flex-align: center;
+				align-items: center;
+				.copy, .author, .social-medias{
+					flex: 33%;
+				}
+				.author{
+					text-align: center;
+				}
+				.social-medias{
+					ul{
+						list-style: none;
+						display: -ms-flexbox;
+						display: -webkit-flex;
+						display: flex;
+						-webkit-flex-direction: row;
+						-ms-flex-direction: row;
+						flex-direction: row;
+						-webkit-flex-wrap: wrap;
+						-ms-flex-wrap: wrap;
+						flex-wrap: wrap;
+						-webkit-justify-content: flex-end;
+						-ms-flex-pack: end;
+						justify-content: flex-end;
+						-webkit-align-content: center;
+						-ms-flex-line-pack: center;
+						align-content: center;
+						-webkit-align-items: center;
+						-ms-flex-align: center;
+						align-items: center;
+						li{
+							padding: 5px 3px;
+							a{
+								background-color: #2c3b42;
+								color: #fff;
+								padding: 5px 7px;
+								
+								&.twitter:hover{
+									background-color: #71b6d5;
+								}
+								&.facebook{
+									padding: 5px 10px;
+									&:hover{
+										background-color: #71b6d5;
+									}
+								}
+								&.linkedin:hover{
+									background-color: #71b6d5;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Common styles */
+nav.navbar-default{
+	background: transparent;
+	border: none;
+	&.navbar-fixed-top{
+		background-color: rgba(0,0,0,0.6);
+		li > a{
+			color: #fff;
+		}
+	}
+	.navbar-nav{
+		float: right;
+	}
+}
+
+section{
+	margin: 15px 0 30px;
+	.section-title{
+		text-align: center;
+		margin: 35px 0 30px;
+		h2{
+			color: #709dca;
+			font-weight: 800;
+			font-size: 26px;
+			margin-bottom: 10px;
+		}
+		.underlines{
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 20px;
+			i.fa{
+				color: @contrast_color;
+				margin: 0 10px;
+				font-size: 28px;
+			}
+			.line{
+				width: 100px;
+				height: 2px;
+				background-color: @contrast_color;
+				margin-top: -2px;
+			}
+		}
+	}
+}
+
+/* Blocks styles */
+@import "_who-we-are.less";
+@import "_what-we-offer.less";
+@import "_see-our-work.less";
+@import "_testimonials.less";

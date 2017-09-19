@@ -1,0 +1,60 @@
+extends ../../node_modules/pug-bootstrap/_bootstrap.pug
+include mixins.pug
+
+append styles
+    link(rel="stylesheet", href="assets/css/home.css")
+
+block body
+    .navbar-wrapper
+        .container
+            +navbar-fixed("Business Name","main-navbar")
+                +nav_item("#") Home
+                +nav_item("#") Services
+                +nav_item("#") About
+                +nav_item("#") Portifolio
+                +nav_item("#") Testimonials
+                +nav_item("#") Contact
+    block content
+        // Todo o conteudo aqui
+        
+    footer
+        .footer
+            .container
+                .row
+                    .col-md-3
+                        h4.title.brand Business Name
+                        p Donec vitae cursus quam. Etiam dignissim, nulla a congue auctor, massa urna cursus enim, id sodales elit ligula quis diam. Morbi ut semper augue. Fusce sit amet lectus turpis. Integer a cursus tellus, et imperdiet purus. Donec sed orci placerat, vulputate risus id, faucibus massa. Mauris justo arcu, faucibus at nunc quis.
+                    .col-md-3
+                        h4.title Contact
+                        p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in so.
+                        +box-media-icon("map-marker", "San Francisco, USA")
+                        +box-media-icon("envelope-o", "icon@company.com")
+                        +box-media-icon("phone", "32 98888-7777")
+                    .col-md-3
+                        h4.title Latest Twittes
+                        +box-media-icon("twitter", "", "left", "top")
+                            | Curabitur felis nibh, lacinia non rhoncus vel, lobortis et lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            small 5 hours ago
+                        +box-media-icon("twitter", "", "left", "top")
+                            | Curabitur felis nibh, lacinia non rhoncus vel, lobortis et lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            small 5 hours ago
+                    .col-md-3
+                        h4.title Newsletter
+                        p Type your email address below and recive our daily news letter for free
+                        .form-group
+                            .input-group                   
+                                +input-simple("text","input-newsletter",{placeholder: "Seu melhor e-mail", name: "email"})
+                                .input-group-btn 
+                                    button.btn.btn-primary Submit
+            .foot
+                .container
+                    span.copy © 2015 Business name.All rights reserved.
+                    span.author Designed by 
+                        a(href="Colorpixels.net") Colorpixels.net
+                    .social-medias
+                        ul
+                            - var sMedias = ['facebook', 'linkedin', 'twitter']
+                            each val in sMedias
+                                li
+                                    a(href="#",class=val)
+                                        i.fa(class="fa-" + val)

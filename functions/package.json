@@ -6,7 +6,8 @@
     "express-less": "^0.1.0",
     "firebase-admin": "~5.2.1",
     "firebase-functions": "^0.6.2",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.0-rc.4",
+    "pug-bootstrap": "0.0.15"
   },
   "private": true
 }

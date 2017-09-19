@@ -17,7 +17,7 @@ function getFacts(){
 
 const app = express();
 
-app.set('views', './views')
+app.set('views', './src/views')
 app.set('view engine', 'pug')
 
 app.use('/assets/css', expressLess(__dirname + '/src/assets/less', { compress: true }));
@@ -29,6 +29,7 @@ app.get('/', (request, response) => {
     response.set('Cache-Control', 'public, max-age=300, s-maxage=600')
     getFacts().then(facts => {
         response.render('index', {
+            baseUrl: 'http://localhost:5003/thamys-guedes/us-central1/app/',
             title: 'Pug - Hands ON',
             message:{
                 header: 'Olá Mundo!',
