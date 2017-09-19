@@ -8,3 +8,7 @@ html(lang="en")
     body
         h1= message.header
         p= message.text
+
+        ul
+            each fact in facts
+                li= fact
