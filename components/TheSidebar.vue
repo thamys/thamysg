@@ -31,6 +31,7 @@ export default {
   .sidebar
     background-color: var(--color-surface-base)
     flex-basis: 30vw
+    max-width: 380px
     min-height: 100vh
     padding: 0 16px  
   .profile
@@ -42,7 +43,7 @@ export default {
     .img
       border-radius: 50%
       margin: 4px 0
-      max-width: 20vw
+      max-width: 250px
     .name
       font:
         size: 1.25em
