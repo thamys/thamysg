@@ -1,0 +1,16 @@
+body, div, main,
+header, footer,
+article, section,
+nav, ul, li,
+button {
+  display: flex;
+  flex: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+button, li, nav {
+  flex-direction: row;
+}
+main > *:only-child {
+  flex: 1;
+}
