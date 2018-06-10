@@ -2,18 +2,22 @@
   .professionalXP
     h5.title Experiência Profissional
     .timeline
-      each val in [1,2,3,4,5]
-        .job
-          img.cpnLogo(src="http://emiolo.com/wp-content/uploads/2017/08/logo_emiolo_site-2.png")
-          .info
-            h5.jobTitle UI/UX Designer e Front End Developer
-            h6.company eMiolo.com Soluções em Internet Ltda.
-            span.period Desde setembro 2016 até agora
+      .job(v-for="job in experiences")
+        img.cpnLogo(:src="job.logo")
+        .info
+          h5.jobTitle {{ job.title }}
+          h6.company {{ job.company }}
+          span.period {{ job.period }}
 </template>
 
 <script>
 export default {
-  name: 'ProfessionalXP'
+  name: 'ProfessionalXP',
+  data () {
+    return {
+      experiences: this.$store.state.experiences
+    }
+  }
 }
 </script>
 

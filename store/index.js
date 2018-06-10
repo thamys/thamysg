@@ -17,5 +17,25 @@ export const state = () => ({
       title: 'Outras Competências',
       items: [ 'Codificação de front-end', 'Less', 'GruntJS', 'Smarty', 'Pug' ]
     }
-  }
+  },
+  experiences: [
+    {
+      logo: 'http://emiolo.com/wp-content/uploads/2017/08/logo_emiolo_site-2.png',
+      title: 'UI/UX Designer e Front End Developer',
+      company: 'eMiolo.com Soluções em Internet Ltda.',
+      period: 'Desde setembro 2016 até agora'
+    },
+    {
+      logo: 'http://emiolo.com/wp-content/uploads/2017/08/logo_emiolo_site-2.png',
+      title: 'UI/UX Designer e Front End Developer',
+      company: 'eMiolo.com Soluções em Internet Ltda.',
+      period: 'Desde setembro 2016 até agora'
+    },
+    {
+      logo: 'http://emiolo.com/wp-content/uploads/2017/08/logo_emiolo_site-2.png',
+      title: 'UI/UX Designer e Front End Developer',
+      company: 'eMiolo.com Soluções em Internet Ltda.',
+      period: 'Desde setembro 2016 até agora'
+    }
+  ]
 })
