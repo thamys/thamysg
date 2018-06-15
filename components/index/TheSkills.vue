@@ -9,13 +9,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'TheSkills',
-  computed: {
-    skills () {
-      return this.$store.state.skills
-    }
-  }
+  computed: mapState([ 'skills' ])
 }
 </script>
 

@@ -2,7 +2,7 @@
   .content
     .about
       h5.title Sobre Mim
-      .textAbout(v-html="text_about")
+      .textAbout(v-html="about_me")
     TheSkills
     ProfessionalXP
 </template>
@@ -10,17 +10,14 @@
 <script>
 import ProfessionalXP from '~/components/index/ProfessionalXP'
 import TheSkills from '~/components/index/TheSkills'
+import { mapState } from 'vuex'
 
 export default {
   components: {
     ProfessionalXP,
     TheSkills
   },
-  computed: {
-    text_about () {
-      return this.$store.state.about_me
-    }
-  }
+  computed: mapState([ 'about_me' ])
 }
 </script>
 
