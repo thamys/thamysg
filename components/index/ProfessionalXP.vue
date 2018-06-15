@@ -14,7 +14,15 @@
 import { mapState } from 'vuex'
 export default {
   name: 'ProfessionalXP',
-  computed: mapState([ 'experiences' ])
+  computed: mapState([ 'experiences' ]),
+  mounted() {
+    this.loadExperiences()
+  },
+  methods: {
+    loadExperiences() {
+      this.$store.commit('CHANGE_PROFISSIONAL_XP')
+    }
+  }
 }
 </script>
 

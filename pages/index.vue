@@ -18,7 +18,7 @@ export default {
     TheSkills
   },
   computed: mapState([ 'about_me' ]),
-  mounted: function () {
+  mounted() {
     this.loadText()
   },
   methods: {

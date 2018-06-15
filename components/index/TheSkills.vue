@@ -13,7 +13,15 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'TheSkills',
-  computed: mapState([ 'skills' ])
+  computed: mapState([ 'skills' ]),
+  mounted() {
+    this.loadSkills()
+  },
+  methods: {
+    loadSkills() {
+      this.$store.commit('CHANGE_SKILLS')
+    }
+  }
 }
 </script>
 
