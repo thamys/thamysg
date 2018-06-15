@@ -17,7 +17,15 @@ export default {
     ProfessionalXP,
     TheSkills
   },
-  computed: mapState([ 'about_me' ])
+  computed: mapState([ 'about_me' ]),
+  mounted: function () {
+    this.loadText()
+  },
+  methods: {
+    loadText() {
+      this.$store.commit('CHANGE_ABOUT_ME')
+    }
+  }
 }
 </script>
 
