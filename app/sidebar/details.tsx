@@ -40,7 +40,7 @@ const items: DescriptionsProps["items"] = [
 const DetailsComponent = () => {
   return (
     <Col span={24}>
-      <Descriptions title="User Info" items={items} />
+      <Descriptions items={items} />
     </Col>
   );
 };

@@ -9,9 +9,9 @@ import React from "react";
 const IntroComponent = () => {
   return (
     <Col span={24} className="flex flex-col items-center">
-      <Avatar size={64} src="https://via.placeholder.com/150" />
-      <Typography.Title level={4}>Thamys Guedes</Typography.Title>
-      <Typography.Title level={5}>Front-end Developer</Typography.Title>
+      <Avatar size={120} src="https://via.placeholder.com/150" />
+      <Typography.Title level={4} className="!mb-0 !mt-4">Thamys Guedes</Typography.Title>
+      <Typography.Title level={5} className="!mt-2">Front-end Developer</Typography.Title>
       <Flex gap="small">
         <Tooltip title="Linkedin">
           <Button

@@ -44,7 +44,6 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
         <SidebarComponent />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }} />
         <Content style={{ margin: "24px 16px 0" }}>
           <div
             style={{
