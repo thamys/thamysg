@@ -5,7 +5,7 @@ const RecommendationsComponent = () => {
   return (
     <Col span={24} id="recommendations">
       <Row>
-        <Col span={24}>
+        <Col span={24} className="text-center">
           <Typography.Title level={3}>Recommendations</Typography.Title>
           <Typography.Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,

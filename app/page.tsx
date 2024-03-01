@@ -12,10 +12,12 @@ import {
 } from "antd";
 import React from "react";
 import RecommendationsComponent from "./recommendations";
+import ServicesComponent from "./services";
+import EducationComponent from "./education";
 
 const LandingPage = () => {
   return (
-    <Row gutter={[24, 24]} className="w-full">
+    <Row gutter={[0, 60]} className="w-full">
       <Col span={24} id="hero">
         <Row gutter={[16, 16]}>
           <Col span={16}>
@@ -34,34 +36,9 @@ const LandingPage = () => {
           </Col>
         </Row>
       </Col>
-      <Col span={24} id="services">
-        <Row>
-          <Col span={24}>
-            <Typography.Title level={3}>Services</Typography.Title>
-            <Typography.Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-              volutpat feugiat placerat lobortis. Natoque rutrum semper sed
-              suspendisse nunc lectus.
-            </Typography.Paragraph>
-          </Col>
-          <div className="grid grid-flow-row grid-cols-3 gap-4 grow">
-            {Array(3)
-              .fill(0)
-              .map((_, index) => (
-                <Card className="w-full flex-grow text-center">
-                  <Image src="https://via.placeholder.com/150" alt="Service" />
-                  <Typography.Title level={5}>Service {index}</Typography.Title>
-                  <Typography.Paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-                    volutpat feugiat placerat lobortis. Natoque rutrum semper
-                    sed suspendisse nunc lectus.
-                  </Typography.Paragraph>
-                </Card>
-              ))}
-          </div>
-        </Row>
-      </Col>
+      <ServicesComponent />
       <RecommendationsComponent />
+      <EducationComponent/>
     </Row>
   );
 };
