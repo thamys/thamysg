@@ -18,12 +18,12 @@ const RecommendationsComponent = () => {
             {Array(3)
               .fill(0)
               .map((_, index) => (
-                <div>
+                <div key={index}>
                   <div className="grid grid-flow-row grid-cols-3 gap-4 grow">
                     {Array(3)
                       .fill(0)
                       .map((_, index) => (
-                        <Card className="w-full flex-grow">
+                        <Card key={index} className="w-full flex-grow">
                           <Rate className="mb-4" />
                           <Typography.Title level={5}>
                             Great Quality!

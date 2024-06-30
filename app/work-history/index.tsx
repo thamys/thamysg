@@ -23,7 +23,7 @@ const count = 3;
 const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
 
 
-const EducationComponent = () => {
+const WorkHistoryComponent = () => {
   const [initLoading, setInitLoading] = useState(true);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<DataType[]>([]);
@@ -81,7 +81,7 @@ const EducationComponent = () => {
     <Col id="education" span={24}>
       <Row>
         <Col span={24} className="text-center">
-          <Typography.Title level={3}>Education</Typography.Title>
+          <Typography.Title level={3}>Work History</Typography.Title>
           <Typography.Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
             volutpat feugiat placerat lobortis. Natoque rutrum semper sed
@@ -119,4 +119,4 @@ const EducationComponent = () => {
   );
 };
 
-export default EducationComponent;
+export default WorkHistoryComponent;

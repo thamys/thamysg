@@ -19,7 +19,7 @@ const ServicesComponent = () => {
             {Array(3)
               .fill(0)
               .map((_, index) => (
-                <Card className="w-full flex-grow text-center">
+                <Card key={index} className="w-full flex-grow text-center">
                   <Image src="https://via.placeholder.com/150" alt="Service" />
                   <Typography.Title level={5}>Service {index}</Typography.Title>
                   <Typography.Paragraph>
