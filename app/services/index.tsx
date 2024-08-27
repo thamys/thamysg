@@ -20,7 +20,7 @@ const ServicesComponent = () => {
               .fill(0)
               .map((_, index) => (
                 <Card key={index} className="w-full flex-grow text-center">
-                  <Image src="https://via.placeholder.com/150" alt="Service" />
+                  <Image width={350} height={350} src="https://via.placeholder.com/150" alt="Service" />
                   <Typography.Title level={5}>Service {index}</Typography.Title>
                   <Typography.Paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,

@@ -27,7 +27,7 @@ const LandingPage = () => {
             </Button>
           </Col>
           <Col span={8}>
-            <Image src="https://via.placeholder.com/300" alt="Thamys Guedes" />
+            <Image width={350} height={350} src="https://via.placeholder.com/300" alt="Thamys Guedes" />
           </Col>
         </Row>
       </Col>

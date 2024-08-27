@@ -1,10 +1,9 @@
-'use client';
+"use client";
 import React, { PropsWithChildren } from "react";
 import { Layout, theme } from "antd";
 import SidebarComponent from "./sidebar";
 
 const { Content, Footer, Sider } = Layout;
-
 
 const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
   const {
@@ -14,9 +13,10 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <Layout>
       <Sider
-      style={{
-        backgroundColor: colorBgContainer,
-      }}
+        style={{
+          backgroundColor: colorBgContainer,
+        }}
+        width={280}
         breakpoint="lg"
         collapsedWidth="0"
         onBreakpoint={(broken) => {
