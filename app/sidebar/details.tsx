@@ -7,19 +7,19 @@ const items: DescriptionsProps["items"] = [
     key: "1",
     label: "Age",
     children: <Typography.Text className="text-right w-full">33</Typography.Text>,
-    span: 4,
+    span: 3,
   },
   {
     key: "2",
     label: "Residence",
     children: <Typography.Text className="text-right w-full">Brazil</Typography.Text>,
-    span: 4,
+    span: 3,
   },
   { 
     key: "3",
     label: "Availability",
     children: <Typography.Text className="text-right w-full" type="success">Freelance</Typography.Text>,
-    span: 4,
+    span: 3,
   },
   {
     key: "4",
@@ -33,7 +33,7 @@ const items: DescriptionsProps["items"] = [
         Lumx
       </Link>
     ),
-    span: 4,
+    span: 3,
   },
 ];
 

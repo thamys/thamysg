@@ -6,13 +6,13 @@ const items: DescriptionsProps["items"] = [
     key: "1",
     label: "Portuguese",
     children: <Typography.Text className="text-right w-full">Native</Typography.Text>,
-    span: 4,
+    span: 3,
   },
   {
     key: "2",
     label: "English",
     children: <Typography.Text className="text-right w-full">Advanced</Typography.Text>,
-    span: 4,
+    span: 3,
   },
 ];
 
