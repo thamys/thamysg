@@ -4,7 +4,7 @@ export const contacts = [
   {
     name: "Email",
     icon: MailOutlined,
-    link: "mailto:thataguedis@gmail.com",
+    link: "mailto:contato@thamys.dev",
   },
   {
     name: "WhatsApp",
@@ -17,7 +17,7 @@ export const medias = [
   {
     name: "Linkedin",
     icon: LinkedinOutlined,
-    link: "https://www.linkedin.com/in/thamys-guedes/",
+    link: "https://www.linkedin.com/in/thamyres-guedes-reis-correa/",
   },
   {
     name: "Github",

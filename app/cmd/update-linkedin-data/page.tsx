@@ -11,7 +11,9 @@ const UpdateLinkedinDataPage = () => {
 
   const redirectToAuthorizationUrl = async () => {
     const authorizationUrl = await getAuthorizationUrl();
-    router.push(authorizationUrl);
+    console.log(authorizationUrl);
+    // router.push(authorizationUrl);
+    // https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=77ttv92j6ejpon&redirect_uri=http://localhost:3000/cmd/update-linkedin-data&state=randomstring&scope=r_liteprofile%20r_emailaddress%20w_member_social
   };
 
   const getLinkedinData = async () => {

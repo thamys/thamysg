@@ -5,7 +5,7 @@ export async function getAuthorizationUrl() {
   const redirectUri = process.env.LINKEDIN_REDIRECT_URI;
   const state = "randomstring"; // You should generate this dynamically and store it to validate later
 
-  const authorizationUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&state=${state}&scope=r_liteprofile%20r_emailaddress%20w_member_social`;
+  const authorizationUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&state=${state}&scope=openid%20profile`;
 
   return authorizationUrl;
 }

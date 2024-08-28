@@ -8,13 +8,9 @@ import { FilePdfOutlined } from "@ant-design/icons";
 const ContactMeComponent = () => {
   return (
     <Col span={24} id="services">
-      <Row gutter={[60, 0]} align="bottom">
-        <Col span={14}>
-          <Typography.Title level={3}>Contact Me </Typography.Title>
+          <Typography.Title level={3}>Stay Connected</Typography.Title>
           <Typography.Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-            volutpat feugiat placerat lobortis. Natoque rutrum semper sed
-            suspendisse nunc lectus.
+          I’m always open to discussing new opportunities, collaborations, or simply connecting to share insights. Feel free to reach out via any of the methods below:.
           </Typography.Paragraph>
           <Flex gap={24}>
             <Flex vertical gap={24} className="grow">
@@ -35,7 +31,7 @@ const ContactMeComponent = () => {
                   )}
                 />
               </Card>
-              <Button type="primary" size="large" className="w-full h-16 bg-slate-600 flex items-center justify-center">
+              <Button href={'/cv.pdf'} target="_blank" type="primary" size="large" className="w-full h-16 bg-slate-600 flex items-center justify-center">
                 <FilePdfOutlined />
                 Download my CV
               </Button>
@@ -58,11 +54,9 @@ const ContactMeComponent = () => {
               />
             </Card>
           </Flex>
-        </Col>
-        <Col span={10}>
+        {/* <Col span={10}>
           <Avatar size={350} src="https://via.placeholder.com/350" />
-        </Col>
-      </Row>
+        </Col> */}
     </Col>
   );
 };

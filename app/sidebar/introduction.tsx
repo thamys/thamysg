@@ -9,7 +9,7 @@ import React from "react";
 const IntroComponent = () => {
   return (
     <Col span={24} className="flex flex-col items-center">
-      <Avatar size={120} src="https://via.placeholder.com/150" />
+      <Avatar size={120} src="/profile.jpg" />
       <Typography.Title level={4} className="!mb-0 !mt-4">Thamys Guedes</Typography.Title>
       <Typography.Title level={5} className="!mt-2">Front-end Developer</Typography.Title>
       <Flex gap="small">
