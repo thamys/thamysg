@@ -2,12 +2,11 @@
 import { Button, Card, Col, Row, Space, Typography } from "antd";
 import React from "react";
 import RecommendationsComponent from "../recommendations";
-import ServicesComponent from "../services";
 import EducationComponent from "../education";
+import ServicesComponent from "../services";
 import WorkHistoryComponent from "../work-history";
 import ContactMeComponent from "../contact";
-import Image from "next/image";
-import { MailOutlined } from "@ant-design/icons";
+import { MailOutlined, PictureOutlined } from "@ant-design/icons";
 import AboutComponent from "../about";
 
 const { Meta } = Card;
@@ -46,7 +45,7 @@ const LandingPage = () => {
             />
             <Button
               type="primary"
-              icon={<MailOutlined />}
+              icon={<PictureOutlined />}
               className="h-10 bg-slate-600 px-8  mt-4"
             >
               View Portfolio

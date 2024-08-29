@@ -1,10 +1,8 @@
 "use client";
 import {
   Avatar,
-  Badge,
   Button,
   Col,
-  Flex,
   List,
   Row,
   Skeleton,
@@ -16,9 +14,8 @@ import React, { useState } from "react";
 import { workHistory, WorkHistoryEntry } from "./data";
 
 const { Item } = List;
-const { Meta } = Item;
 
-const count = 3;
+const count = 2;
 
 const WorkHistoryComponent = () => {
   const [loading, setLoading] = useState(false);
@@ -28,7 +25,7 @@ const WorkHistoryComponent = () => {
 
   const onLoadMore = () => {
     setLoading(true);
-    const start = list.length - 1;
+    const start = list.length;
     const end = start + count;
     setList(list.concat(...workHistory.slice(start, end)));
     setLoading(false);
@@ -47,7 +44,7 @@ const WorkHistoryComponent = () => {
     </div>
   ) : null;
   return (
-    <Col id="education" span={24}>
+    <Col id="work-history" span={24}>
       <Row>
         <Col span={24} className="text-center">
           <Typography.Title level={3}>Professional Journey</Typography.Title>
@@ -58,7 +55,7 @@ const WorkHistoryComponent = () => {
         </Col>
         <Col span={24}>
           <List
-            className="demo-loadmore-list"
+            className="w-full px-12"
             loading={loading}
             itemLayout="horizontal"
             loadMore={list.length < workHistory.length ? loadMore : false}
