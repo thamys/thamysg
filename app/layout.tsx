@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "thamys.dev",
-  description: "Full-Stack Developer | Front-End Specialist | React - NodeJS - Web3.js",
+  description:
+    "Full-Stack Developer (FE Heavy) | Front-End Specialist | React - Next.JS - Tailwind - Ant Design",
 };
 
 export default function RootLayout({
