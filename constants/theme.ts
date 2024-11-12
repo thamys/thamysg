@@ -1,5 +1,8 @@
 import { ThemeConfig } from "antd";
 
+export const primaryColor: string = "#8A42DB";
+export const contrastColor: string = "#7DFFAF";
+
 const customTheme: ThemeConfig = {
   token: {
     colorPrimary: "#8A42DB",
@@ -8,6 +11,8 @@ const customTheme: ThemeConfig = {
     colorBgElevated: "#413A4F",
     colorTextBase: "#171023",
     colorTextSecondary: "#2C243B",
+    colorTextTertiary: "#7DFFAF",
+    colorFillTertiary: "#7DFFAF",
   },
 };
 

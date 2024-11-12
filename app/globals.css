@@ -22,3 +22,19 @@
     text-wrap: balance;
   }
 }
+
+.text-gradient-horizontal {
+  background: linear-gradient(90deg, #9955e8 0%, #7bffaf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text-gradient-vertical {
+  background: linear-gradient(180deg, #7dffaf 0%, #9955e8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

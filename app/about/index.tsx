@@ -1,35 +1,77 @@
 "use client";
-import { Card, Col, Image, Row, Typography } from "antd";
+import { Button, Card, Col, Flex, Row, theme, Typography } from "antd";
+import Image from "next/image";
 import React from "react";
+import { Kalam } from "next/font/google";
+import { contrastColor, primaryColor } from "@/constants/theme";
+import { JavaScriptOutlined, Html5Outlined } from "@ant-design/icons";
+
+const kalam = Kalam({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const AboutComponent = () => {
+  const {
+    token: { colorBgElevated },
+  } = theme.useToken();
   return (
-    <Col span={24} id="about" className="text-justify px-8">
-      <Typography.Title className="text-center" level={2}>
-        About me
-      </Typography.Title>
-      <Typography.Paragraph>
-        With over 10 years of experience, I bring extensive knowledge in leading
-        website design projects from start to finish. My work in software houses
-        has allowed me to successfully manage diverse projects across various
-        industries. I have a strong command of HTML, CSS, JavaScript, and UI
-        frameworks, and I’m always eager to learn new technologies.
-      </Typography.Paragraph>
-
-      <Typography.Paragraph>
-        I excel in overseeing the entire project lifecycle, ensuring every
-        detail aligns with the client’s vision. My ability to gather and direct
-        product information, much like a product owner, helps me create
-        user-focused solutions. I am also skilled in writing clean, secure code
-        and resolving complex coding issues.
-      </Typography.Paragraph>
-
-      <Typography.Paragraph>
-        My leadership abilities have enabled me to guide teams effectively,
-        delivering projects on time and to the highest standards. Whether
-        working on small or large-scale projects, I am committed to exceeding
-        expectations.
-      </Typography.Paragraph>
+    <Col
+      span={24}
+      id="about"
+      className="flex justify-stretch items-center gap-8 px-8"
+      style={{
+        backgroundColor: colorBgElevated,
+        borderRadius: "1rem",
+        padding: "2rem",
+      }}
+    >
+      <Image
+        src="/designer-girl.svg"
+        alt="About me"
+        width={300}
+        height={300}
+        className="rounded-full"
+      />
+      <section className="flex flex-col gap-4 justify-center items-start">
+        <div className="flex gap-4 justify-center">
+          <JavaScriptOutlined
+            style={{ fontSize: "1rem", color: primaryColor }}
+          />
+          <Html5Outlined style={{ fontSize: "1rem", color: primaryColor }} />
+          <JavaScriptOutlined
+            style={{ fontSize: "1rem", color: primaryColor }}
+          />
+          <Html5Outlined style={{ fontSize: "1rem", color: primaryColor }} />
+          <JavaScriptOutlined
+            style={{ fontSize: "1rem", color: primaryColor }}
+          />
+          <Html5Outlined style={{ fontSize: "1rem", color: primaryColor }} />
+        </div>
+        <header>
+          <Typography.Title
+            className={`!text-sm !mb-0 !text-[${contrastColor}]`}
+            style={{
+              fontFamily: kalam.style.fontFamily,
+            }}
+            level={2}
+          >
+            About me
+          </Typography.Title>
+          <Typography.Title level={3} className="!mt-0">
+            Crafting Impactful User Experiences
+          </Typography.Title>
+        </header>
+        <Typography.Paragraph>
+          Beyond front-end development, I’m an avid storyteller, currently
+          writing my own book, a passionate RPG gamer, and a cat lover. I enjoy
+          sharing insights through talks and exploring new projects in my free
+          time, from building online apps to crafting fanfic reader tools.
+        </Typography.Paragraph>
+        <Button type="primary" href="#contact">
+          Get in touch
+        </Button>
+      </section>
     </Col>
   );
 };

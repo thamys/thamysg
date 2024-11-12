@@ -1,6 +1,13 @@
 "use client";
+import { contrastColor } from "@/constants/theme";
 import { Card, Col, Image, Row, Typography } from "antd";
+import { Kalam } from "next/font/google";
 import React from "react";
+
+const kalam = Kalam({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const services = [
   {
@@ -25,7 +32,15 @@ const ServicesComponent = () => {
     <Col span={24} id="services">
       <Row>
         <Col span={24} className="text-center">
-          <Typography.Title level={2}>My Services</Typography.Title>
+        <Typography.Title
+            className={`!text-sm !mb-0 !text-[${contrastColor}]`}
+            style={{
+              fontFamily: kalam.style.fontFamily,
+            }}
+            level={2}
+          >
+            Services Offered
+          </Typography.Title>
           <Typography.Paragraph className="text-lg">
             Expert solutions tailored to your project needs.
           </Typography.Paragraph>

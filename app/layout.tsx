@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Heebo } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
-import { useEffect } from "react";
 import { ConfigProvider } from "antd";
 import getThemeConfig from "@/constants/theme";
 
-const inter = Inter({ subsets: ["latin"] });
+const heebo = Heebo({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "thamys.dev",
@@ -23,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={heebo.className}>
         <ConfigProvider theme={theme}>{children}</ConfigProvider>
       </body>
     </html>
