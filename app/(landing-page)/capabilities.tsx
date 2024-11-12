@@ -7,30 +7,24 @@ import React from "react";
 
 const CapabilitiesSection = () => {
   return (
-    <Col
-      span={24}
-      id="capabilities"
-      className="text-center max-w-full flex flex-col items-center justify-center gap-4"
-    >
-      <SectionTitle>
-        My Capabilities
-      </SectionTitle>
+    <div className="text-center max-w-full flex flex-col items-center justify-center gap-4">
+      <SectionTitle>My Capabilities</SectionTitle>
       <Typography.Paragraph className="text-lg">
         In these years, I’ve become proficient in front-end technologies,
         including React, Next.js, and TypeScript, with hands-on experience in UI
         frameworks like Ant Design and TailwindCSS.
       </Typography.Paragraph>
-      <div className="flex flex-row flex-shrink-0 flex-wrap gap-4 justify-center items-center text-center">
+      <div className="w-full flex flex-row flex-shrink-0 flex-wrap gap-2 md:gap-4 justify-center items-center text-center">
         {skiils.map((skill, index) => (
           <Tag
             key={index}
-            className="border rounded-full px-8 py-4 text-md uppercase"
+            className="border rounded-full md:px-8 md:py-4 px-4 py-2 text-md uppercase"
           >
             {skill.name}
           </Tag>
         ))}
       </div>
-    </Col>
+    </div>
   );
 };
 

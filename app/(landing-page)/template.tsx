@@ -45,7 +45,7 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
     <Layout>
       <Affix offsetTop={0}>
         <Sider
-          className="h-screen"
+          className="h-screen hidden lg:block"
           style={{
             backgroundColor: colorBgContainer,
           }}
@@ -65,7 +65,7 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
       <Layout>
         <Affix offsetTop={0}>
           <Header
-            className="flex flex-row justify-between items-center gap-4 p-4 !h-20"
+            className="w-screen md:w-full flex flex-row justify-between items-center gap-4 p-4 !h-20"
             style={{
               backgroundColor: colorBgLayout,
             }}
@@ -82,7 +82,7 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
               className="flex flex-row justify-between items-center"
             >
               <Anchor
-                className="!bg-transparent mr-4"
+                className="!bg-transparent mr-4 hidden md:block"
                 direction="horizontal"
                 targetOffset={120}
                 items={items}
