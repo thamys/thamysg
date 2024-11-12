@@ -35,9 +35,8 @@ const ServicesSection = () => {
         </Typography.Title>
       </Col>
       {services.map((service, index) => (
-        <Col sm={24} md={8}>
+        <Col sm={24} md={8} key={index}>
           <Card
-            key={index}
             style={{
               backgroundColor: colorBgElevated,
             }}

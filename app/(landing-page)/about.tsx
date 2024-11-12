@@ -3,7 +3,12 @@ import { Button, Card, Col, Flex, Row, theme, Typography } from "antd";
 import Image from "next/image";
 import React from "react";
 import { primaryColor } from "@/constants/theme";
-import { JavaScriptOutlined, Html5Outlined } from "@ant-design/icons";
+import {
+  JavaScriptOutlined,
+  Html5Outlined,
+  DollarCircleTwoTone,
+  DollarCircleOutlined,
+} from "@ant-design/icons";
 import SectionTitle from "@/ui/SectionTitle";
 
 const AboutSection = () => {
@@ -60,7 +65,12 @@ const AboutSection = () => {
           sharing insights through talks and exploring new projects in my free
           time, from building online apps to crafting fanfic reader tools.
         </Typography.Paragraph>
-        <Button type="primary" href="#contact">
+        <Button
+          size="large"
+          type="primary"
+          href="mailto:contato@thamys.dev?subject=Quotation Request"
+        >
+          <DollarCircleOutlined />
           Get a quote
         </Button>
       </Col>
