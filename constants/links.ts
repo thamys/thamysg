@@ -1,4 +1,11 @@
-import {  CodepenOutlined, GithubOutlined, LinkedinOutlined, MailOutlined, MediumOutlined, WhatsAppOutlined } from "@ant-design/icons";
+import {
+  CodepenOutlined,
+  GithubOutlined,
+  LinkedinFilled,
+  MailOutlined,
+  MediumCircleFilled,
+  WhatsAppOutlined,
+} from "@ant-design/icons";
 
 export const contacts = [
   {
@@ -16,22 +23,26 @@ export const contacts = [
 export const medias = [
   {
     name: "Linkedin",
-    icon: LinkedinOutlined,
-    link: "https://www.linkedin.com/in/thamyres-guedes-reis-correa/",
+    color: "#0A66C2",
+    icon: LinkedinFilled,
+    link: "https://www.linkedin.com/in/thamys-guedes/",
   },
   {
     name: "Github",
+    color: "#24292E",
     icon: GithubOutlined,
     link: "https://github.com/thamys",
   },
   {
     name: "Medium",
-    icon: MediumOutlined,
-    link: "https://thamysguedes.medium.com/",
+    color: "#00AB6C",
+    icon: MediumCircleFilled,
+    link: "https://medium.com/@thamyresguedesreis",
   },
   {
     name: "Codepen",
+    color: "#000000",
     icon: CodepenOutlined,
-    link: 'https://codepen.io/thamys',  
-  }
-]
+    link: "https://codepen.io/thamysg",
+  },
+];
