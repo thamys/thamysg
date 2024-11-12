@@ -20,7 +20,7 @@ const IntroComponent = () => {
         level={2}
         className={"text-gradient-horizontal " + kalam.className}
       >
-        Hi, I'm Thamys
+        Hi, I&rsquo;m Thamys
       </Typography.Title>
       <Typography.Title level={5} className="!mt-2">
         Front-end Developer

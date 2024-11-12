@@ -4,7 +4,6 @@ import React from "react";
 import RecommendationsComponent from "../recommendations";
 import EducationComponent from "../education";
 import ServicesComponent from "../(landing-page)/services";
-import ContactMeComponent from "../contact";
 import { MailOutlined, PictureOutlined } from "@ant-design/icons";
 import AboutComponent from "../(landing-page)/about";
 
@@ -56,7 +55,6 @@ const LandingPage = () => {
       <ServicesComponent />
       {/* <EducationComponent />
       <RecommendationsComponent /> */}
-      <ContactMeComponent />
     </Row>
   );
 };
