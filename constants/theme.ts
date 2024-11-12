@@ -13,6 +13,8 @@ const customTheme: ThemeConfig = {
     colorTextSecondary: "#2C243B",
     colorTextTertiary: "#7DFFAF",
     colorFillTertiary: "#7DFFAF",
+    colorBorder: "#484848",
+    colorLink: contrastColor,
   },
 };
 
@@ -26,5 +28,12 @@ const darkTheme: ThemeConfig = {
 };
 
 export default function getThemeConfig(darkMode: boolean): ThemeConfig {
-  return darkMode ? { ...customTheme, ...darkTheme } : customTheme;
+  return darkMode
+    ? {
+        token: {
+          ...customTheme.token,
+          ...darkTheme.token,
+        },
+      }
+    : customTheme;
 }

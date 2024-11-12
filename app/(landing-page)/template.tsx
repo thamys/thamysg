@@ -1,7 +1,7 @@
 "use client";
 import React, { PropsWithChildren, useState } from "react";
 import { Affix, Button, Flex, Layout, Menu, MenuProps, theme } from "antd";
-import SidebarComponent from "./sidebar";
+import SidebarComponent from "../sidebar";
 import Image from "next/image";
 import { SunOutlined } from "@ant-design/icons";
 
@@ -29,7 +29,7 @@ const items: MenuItem[] = [
 
 const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
   const {
-    token: { colorBgContainer, borderRadiusLG },
+    token: { colorBgContainer, borderRadiusLG, colorBgBase, colorBgLayout },
   } = theme.useToken();
 
   const [current, setCurrent] = useState("about");
@@ -62,7 +62,12 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
       </Affix>
       <Layout>
         <Affix offsetTop={0}>
-          <Header className="flex flex-row justify-between items-center gap-4 p-4 !h-20">
+          <Header
+            className="flex flex-row justify-between items-center gap-4 p-4 !h-20"
+            style={{
+              backgroundColor: colorBgLayout,
+            }}
+          >
             <Image
               src="/logos/dark.svg"
               alt="logo"
@@ -70,9 +75,11 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
               width={406}
               height={88}
             />
-            <Flex gap="small" className="flex flex-row justify-between items-center">
+            <Flex
+              gap="small"
+              className="flex flex-row justify-between items-center"
+            >
               <Menu
-                inlineCollapsed={false}
                 onClick={onClick}
                 selectedKeys={[current]}
                 mode="horizontal"
@@ -83,18 +90,10 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
             </Flex>
           </Header>
         </Affix>
-        <Content style={{ margin: "24px 16px 0" }}>
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}
-          >
-            {children}
-          </div>
-        </Content>
+        <Content 
+        className="py-8 px-12"
+        
+        >{children}</Content>
         <Footer style={{ textAlign: "center" }}>
           Ant Design ©{new Date().getFullYear()} Created by Ant UED
         </Footer>

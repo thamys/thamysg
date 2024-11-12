@@ -3,11 +3,10 @@ import { Button, Card, Col, Row, Space, Typography } from "antd";
 import React from "react";
 import RecommendationsComponent from "../recommendations";
 import EducationComponent from "../education";
-import ServicesComponent from "../services";
-import WorkHistoryComponent from "../work-history";
+import ServicesComponent from "../(landing-page)/services";
 import ContactMeComponent from "../contact";
 import { MailOutlined, PictureOutlined } from "@ant-design/icons";
-import AboutComponent from "../about";
+import AboutComponent from "../(landing-page)/about";
 
 const { Meta } = Card;
 
@@ -55,7 +54,6 @@ const LandingPage = () => {
       </Col>
       <AboutComponent />
       <ServicesComponent />
-      <WorkHistoryComponent />
       {/* <EducationComponent />
       <RecommendationsComponent /> */}
       <ContactMeComponent />

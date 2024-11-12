@@ -2,16 +2,11 @@
 import { Button, Card, Col, Flex, Row, theme, Typography } from "antd";
 import Image from "next/image";
 import React from "react";
-import { Kalam } from "next/font/google";
-import { contrastColor, primaryColor } from "@/constants/theme";
+import { primaryColor } from "@/constants/theme";
 import { JavaScriptOutlined, Html5Outlined } from "@ant-design/icons";
+import SectionTitle from "@/ui/SectionTitle";
 
-const kalam = Kalam({
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const AboutComponent = () => {
+const AboutSection = () => {
   const {
     token: { colorBgElevated },
   } = theme.useToken();
@@ -49,15 +44,9 @@ const AboutComponent = () => {
           <Html5Outlined style={{ fontSize: "1rem", color: primaryColor }} />
         </div>
         <header>
-          <Typography.Title
-            className={`!text-sm !mb-0 !text-[${contrastColor}]`}
-            style={{
-              fontFamily: kalam.style.fontFamily,
-            }}
-            level={2}
-          >
+          <SectionTitle>
             About me
-          </Typography.Title>
+          </SectionTitle>
           <Typography.Title level={3} className="!mt-0">
             Crafting Impactful User Experiences
           </Typography.Title>
@@ -69,11 +58,11 @@ const AboutComponent = () => {
           time, from building online apps to crafting fanfic reader tools.
         </Typography.Paragraph>
         <Button type="primary" href="#contact">
-          Get in touch
+          Get a quote
         </Button>
       </section>
     </Col>
   );
 };
 
-export default AboutComponent;
+export default AboutSection;
