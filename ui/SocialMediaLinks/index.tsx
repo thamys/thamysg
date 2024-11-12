@@ -12,6 +12,7 @@ const SocialMediaLinks = () => {
             <Button
               style={{
                 backgroundColor: media.color,
+                color: '#F5F6F6',
               }}
               type="text"
               icon={React.createElement(media.icon)}

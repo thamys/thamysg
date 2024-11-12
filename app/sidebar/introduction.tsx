@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import { Kalam } from "next/font/google";
 import { FileOutlined } from "@ant-design/icons";
 import { Avatar, Button, Col, Typography } from "antd";
 import SocialMediaLinks from "@/ui/SocialMediaLinks";
+import { useTheme } from "@/hooks/useThemeMode";
+import { contrastColor, primaryColor } from "@/constants/theme";
 
 const kalam = Kalam({
   subsets: ["latin"],
@@ -10,6 +13,7 @@ const kalam = Kalam({
 });
 
 const IntroComponent = () => {
+  const { isDarkMode } = useTheme();
   return (
     <Col span={24} className="flex flex-col items-center gap-4">
       <Avatar size={120} src="/avatar.svg" />
@@ -33,7 +37,8 @@ const IntroComponent = () => {
           download={"Thamyres - Front-End Developer - Resume.pdf"}
           href="/cv.pdf"
           style={{
-            backgroundColor: "#413A4F",
+            backgroundColor: isDarkMode ? contrastColor : primaryColor,
+            color: isDarkMode ? "#171023" : "#F5F6F6",
           }}
         >
           <FileOutlined />

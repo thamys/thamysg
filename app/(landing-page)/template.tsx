@@ -3,8 +3,9 @@ import React, { PropsWithChildren, useState } from "react";
 import { Affix, Anchor, AnchorProps, Button, Flex, Layout, theme } from "antd";
 import SidebarComponent from "../sidebar";
 import Image from "next/image";
-import { SunOutlined } from "@ant-design/icons";
+import { MoonOutlined, SunOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import { useTheme } from "@/hooks/useThemeMode";
 
 const { Content, Footer, Sider, Header } = Layout;
 
@@ -39,8 +40,10 @@ const items: MenuItem[] = [
 
 const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
   const {
-    token: { colorBgContainer, colorBgLayout },
+    token: { colorBgContainer, colorBgLayout, colorBgElevated },
   } = theme.useToken();
+
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   return (
     <Layout>
@@ -48,7 +51,7 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
         <Sider
           className="h-screen hidden lg:block"
           style={{
-            backgroundColor: colorBgContainer,
+            backgroundColor: isDarkMode ? colorBgContainer : colorBgElevated,
           }}
           width={280}
           breakpoint="lg"
@@ -72,7 +75,7 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
             }}
           >
             <Image
-              src="/logos/dark.svg"
+              src={isDarkMode ? "/logos/dark.svg" : "/logos/default.svg"}
               alt="logo"
               className="h-full w-auto"
               width={406}
@@ -88,8 +91,12 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
                 targetOffset={120}
                 items={items}
               />
-              <Button type="default">PT</Button>
-              <Button type="default" icon={<SunOutlined />} />
+              {/* <Button type="default">PT</Button> */}
+              <Button
+                type="default"
+                onClick={toggleDarkMode}
+                icon={isDarkMode ? <SunOutlined /> : <MoonOutlined />}
+              />
             </Flex>
           </Header>
         </Affix>
