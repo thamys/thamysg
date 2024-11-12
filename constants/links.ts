@@ -16,21 +16,25 @@ export const contacts = [
 export const medias = [
   {
     name: "Linkedin",
+    color: "#0A66C2",
     icon: LinkedinOutlined,
     link: "https://www.linkedin.com/in/thamyres-guedes-reis-correa/",
   },
   {
     name: "Github",
+    color: "#24292E",
     icon: GithubOutlined,
     link: "https://github.com/thamys",
   },
   {
     name: "Medium",
+    color: "#00AB6C",
     icon: MediumOutlined,
     link: "https://thamysguedes.medium.com/",
   },
   {
     name: "Codepen",
+    color: "#000000",
     icon: CodepenOutlined,
     link: 'https://codepen.io/thamys',  
   }

@@ -1,16 +1,14 @@
 "use client";
-import { Button, Card, Col, Flex, List, Row, Tooltip, Typography } from "antd";
+import { Button, Col, Flex, Row, Tooltip, Typography } from "antd";
 import React, { useEffect } from "react";
-import { contacts, medias } from "./constants";
-import Link from "next/link";
 import {
-  FilePdfOutlined,
   GithubFilled,
   LinkedinFilled,
   MediumCircleFilled,
 } from "@ant-design/icons";
 import Image from "next/image";
 import SectionTitle from "@/ui/SectionTitle";
+import { medias } from "@/constants/links";
 
 const ContactSection = () => {
   useEffect(() => {
@@ -41,34 +39,18 @@ const ContactSection = () => {
           <a href="mailto:contato@thamys.dev">contato@thamys.dev</a> or give me
           a shout on social media.
         </Typography.Paragraph>
-        <Flex gap="small">
-          <Tooltip title="Linkedin">
-            <Button
-              style={{
-                backgroundColor: "#0A66C2",
-              }}
-              type="default"
-              icon={<LinkedinFilled />}
-            />
-          </Tooltip>
-          <Tooltip title="Github">
-            <Button
-              style={{
-                backgroundColor: "#24292E",
-              }}
-              type="default"
-              icon={<GithubFilled />}
-            />
-          </Tooltip>
-          <Tooltip title="Medium">
-            <Button
-              style={{
-                backgroundColor: "#00AB6C",
-              }}
-              type="default"
-              icon={<MediumCircleFilled />}
-            />
-          </Tooltip>
+        <Flex gap="middle">
+          {medias.map((media, index) => (
+            <Tooltip title={media.name} key={index}>
+              <Button
+                style={{
+                  backgroundColor: media.color,
+                }}
+                type="text"
+                icon={React.createElement(media.icon)}
+              />
+            </Tooltip>
+          ))}
         </Flex>
       </Col>
     </Row>
