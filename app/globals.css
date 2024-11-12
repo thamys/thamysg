@@ -13,21 +13,67 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    background-color: #171023;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.text-gradient-horizontal {
+  background: linear-gradient(90deg, #9955e8 0%, #7bffaf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text-gradient-vertical {
+  background: linear-gradient(180deg, #7dffaf 0%, #9955e8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.timeline-item {
+  position: relative;
+  display: table;
+  padding-left: 24px;
+  padding-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: currentColor;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: -5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #8A42DB;
+  transform: translateY(-50%);
+}
+
+.timeline-item:first-of-type::before{
+  top: 16px;
+}
+
+.timeline-item:last-of-type::before{
+  bottom: 16px;
+  height: 16px;
 }

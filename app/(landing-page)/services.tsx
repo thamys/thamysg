@@ -1,7 +1,9 @@
 "use client";
-import { Card, Col, Image, Row, Typography } from "antd";
+import { contrastColor, primaryColor } from "@/constants/theme";
+import SectionTitle from "@/ui/SectionTitle";
+import { Card, Col, Image, Row, theme, Typography } from "antd";
+import { Kalam } from "next/font/google";
 import React from "react";
-
 const services = [
   {
     title: "Front-End Development",
@@ -20,12 +22,15 @@ const services = [
   },
 ];
 
-const ServicesComponent = () => {
+const ServicesSection = () => {
+  const {
+    token: { colorBgElevated },
+  } = theme.useToken();
   return (
     <Col span={24} id="services">
       <Row>
         <Col span={24} className="text-center">
-          <Typography.Title level={2}>My Services</Typography.Title>
+          <SectionTitle>Services Offered</SectionTitle>
           <Typography.Paragraph className="text-lg">
             Expert solutions tailored to your project needs.
           </Typography.Paragraph>
@@ -33,8 +38,20 @@ const ServicesComponent = () => {
         <Col span={24}>
           <div className="grid grid-flow-row grid-cols-3 gap-4 grow">
             {services.map((service, index) => (
-              <Card key={index} className="w-full flex-grow text-center">
-                <Typography.Title level={5}>{service.title}</Typography.Title>
+              <Card
+                key={index}
+                style={{
+                  backgroundColor: colorBgElevated,
+                }}
+                className="w-full flex-grow text-center"
+              >
+                <Typography.Title
+                  level={5}
+                  className="
+text-gradient-horizontal"
+                >
+                  {service.title}
+                </Typography.Title>
                 <Typography.Paragraph>
                   {service.description}
                 </Typography.Paragraph>
@@ -47,4 +64,4 @@ const ServicesComponent = () => {
   );
 };
 
-export default ServicesComponent;
+export default ServicesSection;

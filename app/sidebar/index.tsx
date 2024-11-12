@@ -13,14 +13,14 @@ import SkillsComponent from "./skills";
 
 const SidebarComponent = () => {
   return (
-    <Row justify="center" gutter={[24, 24]} className="p-4">
+    <Row justify="center" gutter={[24, 24]} className="pt-20">
       <IntroComponent />
-      <DetailsComponent />
+      {/* <DetailsComponent />
       <LanguagesComponent />
       <SkillsComponent />
       <Button type="primary" className="w-full m-4" icon={<DownloadOutlined />}>
         Download CV
-      </Button>
+      </Button> */}
     </Row>
   );
 };

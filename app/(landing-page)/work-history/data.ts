@@ -14,6 +14,13 @@ export interface WorkHistoryEntry {
   roles: Role[];
 }
 
+export interface WorkHistoryByRoleEntry extends Role {
+  company: string;
+  logoUrl?: string;
+  companyUrl?: string;
+  companyDescription?: string;
+} 
+
 export const workHistory: WorkHistoryEntry[] = [
   {
     company: "Lumx",
@@ -227,3 +234,14 @@ export const workHistory: WorkHistoryEntry[] = [
     ],
   },
 ];
+
+export const workHistoryByRole: WorkHistoryByRoleEntry[] = workHistory.flatMap(
+  (entry) =>
+    entry.roles.map((role) => ({
+      ...role,
+      company: entry.company,
+      logoUrl: entry.logoUrl,
+      companyUrl: entry.companyUrl,
+      companyDescription: entry.companyDescription,
+    }))
+);
