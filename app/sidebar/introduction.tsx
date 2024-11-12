@@ -1,6 +1,8 @@
 import React from "react";
 import { Kalam } from "next/font/google";
 import {
+  DownloadOutlined,
+  FileOutlined,
   GithubFilled,
   LinkedinFilled,
   MediumCircleFilled,
@@ -57,7 +59,10 @@ const IntroComponent = () => {
           />
         </Tooltip>
       </Flex>
-      <Button type="default">My resume</Button>
+      <Button type="default" size="large" download={'Thamyres - Front-End Developer - Resume.pdf'} href="/cv.pdf">
+        <FileOutlined />
+        My resume
+      </Button>
     </Col>
   );
 };

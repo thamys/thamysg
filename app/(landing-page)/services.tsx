@@ -27,40 +27,29 @@ const ServicesSection = () => {
     token: { colorBgElevated },
   } = theme.useToken();
   return (
-    <Col span={24} id="services">
-      <Row>
-        <Col span={24} className="text-center">
-          <SectionTitle>Services Offered</SectionTitle>
-          <Typography.Paragraph className="text-lg">
-            Expert solutions tailored to your project needs.
-          </Typography.Paragraph>
+    <Row gutter={[24, 24]} justify="space-evenly" align="stretch">
+      <Col span={24} className="text-center">
+        <SectionTitle>Services Offered</SectionTitle>
+        <Typography.Title level={5} className="text-lg">
+          Expert solutions tailored to your project needs.
+        </Typography.Title>
+      </Col>
+      {services.map((service, index) => (
+        <Col sm={24} md={8} key={index}>
+          <Card
+            style={{
+              backgroundColor: colorBgElevated,
+            }}
+            className="w-full h-full flex-grow text-center"
+          >
+            <Typography.Title level={5} className="text-gradient-horizontal">
+              {service.title}
+            </Typography.Title>
+            <Typography.Paragraph>{service.description}</Typography.Paragraph>
+          </Card>
         </Col>
-        <Col span={24}>
-          <div className="grid grid-flow-row grid-cols-3 gap-4 grow">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                style={{
-                  backgroundColor: colorBgElevated,
-                }}
-                className="w-full flex-grow text-center"
-              >
-                <Typography.Title
-                  level={5}
-                  className="
-text-gradient-horizontal"
-                >
-                  {service.title}
-                </Typography.Title>
-                <Typography.Paragraph>
-                  {service.description}
-                </Typography.Paragraph>
-              </Card>
-            ))}
-          </div>
-        </Col>
-      </Row>
-    </Col>
+      ))}
+    </Row>
   );
 };
 

@@ -39,6 +39,12 @@
   text-fill-color: transparent;
 }
 
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .timeline-item {
   position: relative;
   display: table;

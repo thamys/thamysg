@@ -1,5 +1,5 @@
 "use client";
-import { Button, Card, Col, Flex, List, Tooltip, Typography } from "antd";
+import { Button, Card, Col, Flex, List, Row, Tooltip, Typography } from "antd";
 import React, { useEffect } from "react";
 import { contacts, medias } from "./constants";
 import Link from "next/link";
@@ -27,9 +27,11 @@ const ContactSection = () => {
     };
   }, []);
   return (
-    <Col span={24} id="services" className="px-12 mb-10 flex gap-12">
-      <Image src="/avatar.svg" alt="Contact" width={160} height={160} />
-      <div>
+    <Row gutter={[24, 24]}>
+      <Col sm={24} md={8}>
+        <Image src="/avatar.svg" alt="Contact" width={160} height={160} />
+      </Col>
+      <Col sm={24} md={16}>
         <SectionTitle>Contact me</SectionTitle>
         <Typography.Title level={5}>
           Enjoyed my work? Let’s work together
@@ -68,8 +70,8 @@ const ContactSection = () => {
             />
           </Tooltip>
         </Flex>
-      </div>
-    </Col>
+      </Col>
+    </Row>
   );
 };
 
