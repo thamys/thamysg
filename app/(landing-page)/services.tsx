@@ -28,12 +28,12 @@ const ServicesSection = () => {
   } = theme.useToken();
   return (
     <Col span={24} id="services">
-      <Row>
+      <Row gutter={[24, 24]}>
         <Col span={24} className="text-center">
           <SectionTitle>Services Offered</SectionTitle>
-          <Typography.Paragraph className="text-lg">
+          <Typography.Title level={5} className="text-lg">
             Expert solutions tailored to your project needs.
-          </Typography.Paragraph>
+          </Typography.Title>
         </Col>
         <Col span={24}>
           <div className="grid grid-flow-row grid-cols-3 gap-4 grow">
