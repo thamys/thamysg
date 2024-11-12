@@ -2,19 +2,20 @@
 import { Button, Card, Col, Flex, Row, theme, Typography } from "antd";
 import Image from "next/image";
 import React from "react";
-import { primaryColor } from "@/constants/theme";
+import { contrastColor, primaryColor } from "@/constants/theme";
 import {
   JavaScriptOutlined,
   Html5Outlined,
-  DollarCircleTwoTone,
   DollarCircleOutlined,
 } from "@ant-design/icons";
 import SectionTitle from "@/ui/SectionTitle";
+import { useTheme } from "@/hooks/useThemeMode";
 
 const AboutSection = () => {
   const {
     token: { colorBgElevated },
   } = theme.useToken();
+  const { isDarkMode } = useTheme();
   return (
     <Row
       gutter={[24, 24]}
@@ -67,7 +68,11 @@ const AboutSection = () => {
         </Typography.Paragraph>
         <Button
           size="large"
-          type="primary"
+          type="text"
+          style={{
+            backgroundColor: isDarkMode ? contrastColor : primaryColor,
+            color: isDarkMode ? "#171023" : "#F5F6F6",
+          }}
           href="mailto:contato@thamys.dev?subject=Quotation Request"
         >
           <DollarCircleOutlined />

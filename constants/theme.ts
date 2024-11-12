@@ -7,8 +7,8 @@ const customTheme: ThemeConfig = {
   token: {
     colorPrimary: "#8A42DB",
     colorSuccess: "#7DFFAF",
-    colorBgBase: "#F5F6F6",
-    colorBgElevated: "#413A4F",
+    colorBgBase: "#D2D5D9",
+    colorBgElevated: "#B5ADC7",
     colorTextBase: "#171023",
     colorTextSecondary: "#2C243B",
     colorTextTertiary: "#7DFFAF",
@@ -21,7 +21,7 @@ const customTheme: ThemeConfig = {
 const darkTheme: ThemeConfig = {
   token: {
     colorBgBase: "#171023",
-    colorBgElevated: "#2C243B",
+    colorBgElevated: "#4E4563",
     colorTextBase: "#F5F6F6",
     colorTextSecondary: "#CDD0D4",
   },
