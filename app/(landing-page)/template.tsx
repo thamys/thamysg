@@ -4,6 +4,7 @@ import { Affix, Anchor, AnchorProps, Button, Flex, Layout, theme } from "antd";
 import SidebarComponent from "../sidebar";
 import Image from "next/image";
 import { SunOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 const { Content, Footer, Sider, Header } = Layout;
 
@@ -94,7 +95,10 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
         </Affix>
         <Content className="py-8 px-12">{children}</Content>
         <Footer style={{ textAlign: "center" }}>
-          Ant Design ©{new Date().getFullYear()} Created by Ant UED
+          thamys.dev ©2024 Created by{" "}
+          <Link href="https://github.com/thamys" target="_blank">
+            Thamyres Guedes
+          </Link>
         </Footer>
       </Layout>
     </Layout>

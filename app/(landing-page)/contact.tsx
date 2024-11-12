@@ -1,14 +1,9 @@
 "use client";
-import { Button, Col, Flex, Row, Tooltip, Typography } from "antd";
+import { Col, Row, Typography } from "antd";
 import React, { useEffect } from "react";
-import {
-  GithubFilled,
-  LinkedinFilled,
-  MediumCircleFilled,
-} from "@ant-design/icons";
 import Image from "next/image";
 import SectionTitle from "@/ui/SectionTitle";
-import { medias } from "@/constants/links";
+import SocialMediaLinks from "@/ui/SocialMediaLinks";
 
 const ContactSection = () => {
   useEffect(() => {
@@ -39,19 +34,7 @@ const ContactSection = () => {
           <a href="mailto:contato@thamys.dev">contato@thamys.dev</a> or give me
           a shout on social media.
         </Typography.Paragraph>
-        <Flex gap="middle">
-          {medias.map((media, index) => (
-            <Tooltip title={media.name} key={index}>
-              <Button
-                style={{
-                  backgroundColor: media.color,
-                }}
-                type="text"
-                icon={React.createElement(media.icon)}
-              />
-            </Tooltip>
-          ))}
-        </Flex>
+        <SocialMediaLinks />
       </Col>
     </Row>
   );

@@ -1,8 +1,8 @@
 import React from "react";
 import { Kalam } from "next/font/google";
 import { FileOutlined } from "@ant-design/icons";
-import { Avatar, Button, Col, Flex, Tooltip, Typography } from "antd";
-import { medias } from "@/constants/links";
+import { Avatar, Button, Col, Typography } from "antd";
+import SocialMediaLinks from "@/ui/SocialMediaLinks";
 
 const kalam = Kalam({
   subsets: ["latin"],
@@ -26,19 +26,7 @@ const IntroComponent = () => {
         Over a Decade of Shaping Digital Innovation
       </Typography.Paragraph>
       <div className="flex flex-col justify-stretch items-stretch gap-4">
-        <Flex gap="middle">
-          {medias.map((media, index) => (
-            <Tooltip title={media.name} key={index}>
-              <Button
-                style={{
-                  backgroundColor: media.color,
-                }}
-                type="text"
-                icon={React.createElement(media.icon)}
-              />
-            </Tooltip>
-          ))}
-        </Flex>
+        <SocialMediaLinks />
         <Button
           type="text"
           size="large"
