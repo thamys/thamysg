@@ -10,9 +10,11 @@ const CapabilitiesSection = () => {
     <div className="text-center max-w-full flex flex-col items-center justify-center gap-4">
       <SectionTitle>My Capabilities</SectionTitle>
       <Typography.Paragraph className="text-lg">
-        In these years, I’ve become proficient in front-end technologies,
-        including React, Next.js, and TypeScript, with hands-on experience in UI
-        frameworks like Ant Design and TailwindCSS.
+        In these years, I've become proficient in front-end and back-end
+        technologies, including React, Next.js, TypeScript, Node.js, and
+        NestJS, with hands-on experience in UI frameworks like Ant Design and
+        TailwindCSS, database solutions like Firebase, PostgreSQL, and MongoDB,
+        as well as containerization with Docker and Kubernetes.
       </Typography.Paragraph>
       <div className="w-full flex flex-row flex-shrink-0 flex-wrap gap-2 md:gap-4 justify-center items-center text-center">
         {skiils.map((skill, index) => (

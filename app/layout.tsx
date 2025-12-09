@@ -6,24 +6,105 @@ import Head from "next/head";
 const heebo = Heebo({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Thamyres Guedes | Front-End Developer Portfolio | React & Next.js",
+  title: "Thamyres Guedes | Lead Software Engineer | Frontend Architect | React, Next.js & Web3 Expert",
   description:
-    "Thamyres Guedes - Experienced Front-End Developer specializing in React.js and Next.js. Create responsive interfaces, manage full project lifecycles, and integrate APIs seamlessly.",
+    "Thamyres Guedes - Lead Software Engineer and Frontend Architect with over a decade of experience. Specializing in React.js, Next.js, TypeScript, Node.js, and Web3 technologies. Expert in building scalable web applications, blockchain integrations, and distributed systems.",
+  keywords: [
+    "Thamyres Guedes",
+    "Lead Software Engineer",
+    "Frontend Architect",
+    "React Developer",
+    "Next.js Expert",
+    "TypeScript",
+    "Web3 Developer",
+    "Blockchain",
+    "Full Stack Developer",
+    "Node.js",
+    "NestJS",
+    "Frontend Development",
+    "Software Engineering",
+    "Distributed Systems",
+    "São Paulo Developer",
+    "Brazil Software Engineer",
+  ],
+  authors: [{ name: "Thamyres Guedes" }],
+  creator: "Thamyres Guedes",
+  publisher: "Thamyres Guedes",
+  openGraph: {
+    type: "profile",
+    locale: "en_US",
+    url: "https://thamys.dev",
+    title: "Thamyres Guedes | Lead Software Engineer | Frontend Architect",
+    description:
+      "Lead Software Engineer and Frontend Architect specializing in React, Next.js, TypeScript, and Web3 technologies. Over a decade of experience building scalable web applications.",
+    siteName: "Thamyres Guedes Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thamyres Guedes | Lead Software Engineer | Frontend Architect",
+    description:
+      "Lead Software Engineer specializing in React, Next.js, TypeScript, and Web3 technologies.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Thamyres Guedes",
-  jobTitle: "Front-End Developer",
+  jobTitle: "Lead Software Engineer | Frontend Architect",
   url: "https://thamys.dev",
+  email: "contato@thamys.dev",
   sameAs: [
-    "https://www.linkedin.com/in/thamys-guedes/",
+    "https://www.linkedin.com/in/thamyres-guedes/",
     "https://github.com/thamys",
   ],
   description:
-    "Experienced Front-End Developer specializing in responsive web interfaces using React.js and Next.js.",
-  skills: ["HTML", "CSS", "JavaScript", "React.js", "Next.js"],
+    "Lead Software Engineer and Frontend Architect with over a decade of experience specializing in React.js, Next.js, TypeScript, Node.js, and Web3 technologies. Expert in building scalable web applications, blockchain integrations, and distributed systems.",
+  knowsAbout: [
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "NestJS",
+    "Web3",
+    "Blockchain",
+    "Distributed Systems",
+    "Frontend Architecture",
+    "Full Stack Development",
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "Agile Methodologies",
+    "Scrum",
+    "Team Leadership",
+    "Project Management",
+  ],
+  alumniOf: [
+    {
+      "@type": "EducationalOrganization",
+      name: "Universidade Estácio de Sá",
+    },
+    {
+      "@type": "EducationalOrganization",
+      name: "Universidade Federal de Juiz de Fora",
+    },
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Lumx",
+  },
 };
 
 export default function RootLayout({

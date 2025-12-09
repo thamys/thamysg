@@ -19,9 +19,47 @@ export interface WorkHistoryByRoleEntry extends Role {
   logoUrl?: string;
   companyUrl?: string;
   companyDescription?: string;
-} 
+}
 
 export const workHistory: WorkHistoryEntry[] = [
+  {
+    company: "HOUS3",
+    logoUrl: "https://example.com/path-to-hous3-logo.png",
+    companyUrl: "https://www.hous3.com",
+    companyDescription:
+      "A climate-tech company focused on carbon-credit compensation initiatives and blockchain-integrated environmental impact solutions.",
+    roles: [
+      {
+        title: "Lead Software Engineer",
+        period: "January 2025 - Present",
+        location: "São Paulo, Brazil · Remote",
+        responsibilities: [
+          "Defined and implemented back-end architecture company-wide using DDD, CQRS, SOLID and a modular services structure — standardized code quality and scalability, enabling multiple teams and products to share a robust technical foundation.",
+          "Architected the front-end platform using Next.js — leveraging Parallel Routes, server components and a fully themeable UI layer (Tailwind CSS + reusable design tokens + React Query / equivalent) — creating a reference architecture adopted across all projects for consistency, performance and long-term maintainability.",
+          "Introduced an internal UI component library and documentation hub with Storybook — enabling isolated development, visual/regression testing, accessibility checks and dramatically speeding up onboarding of new front-end developers.",
+          "Implemented automated end-to-end testing with Cypress — establishing quality gates that reduced regressions in production and ensured stable delivery of complex user flows across multiple applications.",
+          "Collaborated with DevOps to deploy company-wide observability using OpenTelemetry — enabling distributed tracing, performance diagnostics and cross-service monitoring; this infrastructure became essential for the distributed, event-driven architecture in production.",
+          "Contributed to climate-tech / carbon-credit compensation initiatives: authored and audited Solidity smart contracts for tokenization, retirement, tracking and validation of carbon offsets; designed blockchain-integrated workflows to deliver transparency and automation in environmental impact products.",
+        ],
+        skills: [
+          "React.js",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "DDD",
+          "CQRS",
+          "SOLID",
+          "Tailwind CSS",
+          "Storybook",
+          "Cypress",
+          "OpenTelemetry",
+          "Web3",
+          "Solidity",
+          "Blockchain",
+        ],
+      },
+    ],
+  },
   {
     company: "Lumx",
     logoUrl: "https://example.com/path-to-lumx-logo.png",
@@ -30,18 +68,18 @@ export const workHistory: WorkHistoryEntry[] = [
       "A cutting-edge tech company focused on blockchain solutions, enhancing digital identity security and innovation.",
     roles: [
       {
-        title: "Front-End Developer | Tech Lead | Innovation | Blockchain",
+        title: "Senior Software Engineer",
         period: "October 2023 - Present",
-        location: "São Paulo, Brazil",
+        location: "São Paulo, Brazil · Hybrid",
         responsibilities: [
           "Create innovative projects using blockchain as core technologies, such as Digital Decentralized Identity with Polygon ID.",
         ],
-        skills: ["Blockchain", "Digital Identity", "Innovation"],
+        skills: ["Blockchain", "Digital Identity", "Innovation", "React.js", "Next.js", "Web3"],
       },
       {
-        title: "Front-End Developer | Tech Lead | Innovation",
+        title: "Lead Software Engineer",
         period: "March 2023 - November 2023",
-        location: "São Paulo, Brazil",
+        location: "São Paulo, Brazil · Hybrid",
         responsibilities: [
           "Developed web apps compatible with multiple browsers and connected to WEB3.",
           "Coded using React.JS (with and without Next.JS) and UI frameworks (Ant Design, Tailwind).",
@@ -66,9 +104,9 @@ export const workHistory: WorkHistoryEntry[] = [
       "A pioneer in digital assets and WEB3 technologies, DaX is committed to transforming the financial landscape through innovation.",
     roles: [
       {
-        title: "Front-End Developer | Tech Lead",
+        title: "Lead Software Engineer",
         period: "January 2023 - April 2023",
-        location: "São Paulo, Brazil",
+        location: "São Paulo, Brazil · Hybrid",
         responsibilities: [
           "Gained experience with WEB3 technologies and applied new techniques.",
           "Solved everyday problems, made decisions with confidence and autonomy.",
@@ -92,9 +130,9 @@ export const workHistory: WorkHistoryEntry[] = [
       "Specializing in software solutions for project management, VERI is at the forefront of deploying agile methodologies to optimize product development.",
     roles: [
       {
-        title: "Project Development Manager",
+        title: "Lead Software Engineer",
         period: "July 2022 - December 2022",
-        location: "São Paulo, Brazil",
+        location: "São Paulo, Brazil · Hybrid",
         responsibilities: [
           "Managed the new product development team from conception to delivery.",
           "Prioritized features, defined software architecture, and managed people and processes.",
@@ -116,9 +154,9 @@ export const workHistory: WorkHistoryEntry[] = [
       "App Masters is a software house that creates and maintains diverse products, merging cutting-edge technologies with innovative designs.",
     roles: [
       {
-        title: "Full-stack Developer",
+        title: "Senior Software Engineer",
         period: "August 2020 - July 2022",
-        location: "Juiz de Fora, Minas Gerais, Brazil",
+        location: "Juiz de Fora, Minas Gerais, Brazil · Remote",
         responsibilities: [
           "Participated in the creation and maintenance of various products in different areas.",
           "Worked as a front-end and mobile developer to create apps and web apps.",
@@ -186,7 +224,7 @@ export const workHistory: WorkHistoryEntry[] = [
       "BrasilCenter is renowned for its extensive support services, specializing in IT infrastructure and internal systems development.",
     roles: [
       {
-        title: "Técnico em Infraestrutura",
+        title: "Infrastructure Technician",
         period: "February 2014 - August 2015",
         location: "Juiz de Fora e Região, Brazil",
         responsibilities: [
@@ -223,7 +261,7 @@ export const workHistory: WorkHistoryEntry[] = [
       "CAEd focuses on public policy evaluation and education assessment, providing technical support and developing educational software.",
     roles: [
       {
-        title: "Atendente de Suporte",
+        title: "Support Attendant",
         period: "June 2009 - August 2011",
         location: "Juiz de Fora e Região, Brazil",
         responsibilities: [

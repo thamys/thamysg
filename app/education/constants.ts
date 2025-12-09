@@ -17,17 +17,17 @@ interface DataType {
 
 export const educationList = [
   {
-    title: "Bachelors",
-    date: "2017-2021",
+    title: "Analysis and Systems Development",
+    date: "2019 - 2021",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.",
-    location: "University of California, Irvine",
+      "Computer and Information Sciences and Support Services degree focused on systems analysis, development methodologies, and software engineering principles.",
+    location: "Universidade Estácio de Sá",
   },
   {
-    title: "High School",
-    date: "2013-2017",
+    title: "Bachelor of Exact Sciences",
+    date: "2009 - 2011",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.",
-    location: "Irvine High School",
+      "Foundational studies in mathematics, physics, and computational sciences, providing a strong analytical and problem-solving background.",
+    location: "Universidade Federal de Juiz de Fora",
   },
 ];

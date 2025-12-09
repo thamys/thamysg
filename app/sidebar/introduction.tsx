@@ -24,7 +24,7 @@ const IntroComponent = () => {
         Hi, I&rsquo;m Thamys
       </Typography.Title>
       <Typography.Title level={5} className="!mt-2">
-        Front-end Developer
+        Lead Software Engineer | Frontend Architect | React, Next.js, TypeScript Specialist | Web3 & Distributed Systems Expert
       </Typography.Title>
       <Typography.Paragraph className="text-center">
         Over a Decade of Shaping Digital Innovation

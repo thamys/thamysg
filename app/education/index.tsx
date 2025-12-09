@@ -1,62 +1,75 @@
 "use client";
-import {
-  Avatar,
-  Badge,
-  Button,
-  Col,
-  Flex,
-  List,
-  Row,
-  Skeleton,
-  Space,
-  Typography,
-} from "antd";
-import React, { useEffect, useState } from "react";
+import { Col, Row, theme, Typography, Card } from "antd";
+import { BookOutlined } from "@ant-design/icons";
+import React from "react";
 import { educationList } from "./constants";
+import { contrastColor } from "@/constants/theme";
+import SectionTitle from "@/ui/SectionTitle";
+
 const EducationComponent = () => {
+  const {
+    token: { colorBgElevated },
+  } = theme.useToken();
+
   return (
-    <Col id="education" span={24}>
-      <Row>
-        <Col span={24} className="text-center">
-          <Typography.Title level={3}>Education</Typography.Title>
-          <Typography.Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-            volutpat feugiat placerat lobortis. Natoque rutrum semper sed
-            suspendisse nunc lectus.
-          </Typography.Paragraph>
+    <Row
+      gutter={[24, 24]}
+      style={{
+        backgroundColor: colorBgElevated,
+        borderRadius: "1rem",
+        padding: "2rem",
+      }}
+    >
+      <Col span={24} className="text-center">
+        <SectionTitle>Education</SectionTitle>
+        <Typography.Paragraph className="text-lg">
+          Academic background that shaped my technical foundation in computer
+          science and systems development.
+        </Typography.Paragraph>
+      </Col>
+      {educationList.map((item, index) => (
+        <Col sm={24} md={12} key={index}>
+          <Card
+            style={{
+              backgroundColor: colorBgElevated,
+              height: "100%",
+            }}
+            className="border"
+          >
+            <div className="flex gap-4 items-start">
+              <div
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: "50%",
+                  backgroundColor: contrastColor,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexShrink: 0,
+                }}
+              >
+                <BookOutlined style={{ fontSize: "2rem", color: "#fff" }} />
+              </div>
+              <div className="flex flex-col gap-2">
+                <Typography.Title level={5} className="!mb-0">
+                  {item.title}
+                </Typography.Title>
+                <Typography.Text style={{ color: contrastColor }}>
+                  {item.location}
+                </Typography.Text>
+                <Typography.Paragraph className="!mb-0">
+                  {item.description}
+                </Typography.Paragraph>
+                <Typography.Text className="text-sm uppercase">
+                  {item.date}
+                </Typography.Text>
+              </div>
+            </div>
+          </Card>
         </Col>
-        <Col span={24}>
-          <List
-            className="w-full"
-            itemLayout="horizontal"
-            dataSource={educationList}
-            renderItem={(item) => (
-              <List.Item className="w-full">
-                <Flex gap={24}>
-                  <Col className="min-w-60">
-                    <Flex gap={12}>
-                      <Avatar src="https://via.placeholder.com/60" />
-                      <Flex gap={8} vertical>
-                        <Typography.Title level={5} className="!mb-0">
-                          {item.title}
-                        </Typography.Title>
-                        <Typography.Text className="!mt-0">
-                          {item.location}
-                        </Typography.Text>
-                        <Badge status="success" count={item.date} />
-                      </Flex>
-                    </Flex>
-                  </Col>
-                  <Col className="w-full grow">
-                    <Typography.Text>{item.description}</Typography.Text>
-                  </Col>
-                </Flex>
-              </List.Item>
-            )}
-          />
-        </Col>
-      </Row>
-    </Col>
+      ))}
+    </Row>
   );
 };
 

@@ -32,6 +32,11 @@ const items: MenuItem[] = [
     href: "#journey",
   },
   {
+    title: "Open Source",
+    key: "projects",
+    href: "#projects",
+  },
+  {
     title: "Contact",
     key: "contact",
     href: "#contact",
@@ -52,6 +57,7 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
           className="h-screen hidden lg:block"
           style={{
             backgroundColor: isDarkMode ? colorBgContainer : colorBgElevated,
+            padding: "2rem 1.5rem",
           }}
           width={280}
           breakpoint="lg"
@@ -100,7 +106,7 @@ const AppTemplate: React.FC<PropsWithChildren> = ({ children }) => {
             </Flex>
           </Header>
         </Affix>
-        <Content className="py-8 px-12">{children}</Content>
+        <Content className="py-8 px-12 flex justify-center">{children}</Content>
         <Footer style={{ textAlign: "center" }}>
           thamys.dev ©2024 Created by{" "}
           <Link href="https://github.com/thamys" target="_blank">

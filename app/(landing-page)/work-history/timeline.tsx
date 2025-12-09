@@ -43,7 +43,7 @@ const TimelinePerTitle = () => {
         lineHeight: "32px",
       }}
     >
-      <Button onClick={onLoadMore}>loading more</Button>
+      <Button onClick={onLoadMore}>Load more</Button>
     </div>
   ) : null;
   return (

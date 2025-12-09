@@ -12,7 +12,6 @@ const skiils: ISkill[] = [
     name: "Next.js",
     percent: 90,
   },
-
   {
     name: "TypeScript",
     percent: 90,
@@ -41,10 +40,13 @@ const skiils: ISkill[] = [
     name: "Ant Design",
     percent: 90,
   },
-
   {
     name: "SASS",
     percent: 70,
+  },
+  {
+    name: "Node.js",
+    percent: 90,
   },
   {
     name: "Nest.js",
@@ -59,8 +61,56 @@ const skiils: ISkill[] = [
     percent: 90,
   },
   {
+    name: "MongoDB",
+    percent: 80,
+  },
+  {
     name: "REST API",
     percent: 90,
+  },
+  {
+    name: "Docker",
+    percent: 80,
+  },
+  {
+    name: "Kubernetes",
+    percent: 70,
+  },
+  {
+    name: "Git",
+    percent: 90,
+  },
+  {
+    name: "CI/CD",
+    percent: 80,
+  },
+  {
+    name: "Agile Methodologies",
+    percent: 90,
+  },
+  {
+    name: "Scrum",
+    percent: 90,
+  },
+  {
+    name: "Team Leadership",
+    percent: 90,
+  },
+  {
+    name: "Project Management",
+    percent: 85,
+  },
+  {
+    name: "Web3",
+    percent: 80,
+  },
+  {
+    name: "Blockchain",
+    percent: 75,
+  },
+  {
+    name: "Distributed Systems",
+    percent: 75,
   },
 ];
 
